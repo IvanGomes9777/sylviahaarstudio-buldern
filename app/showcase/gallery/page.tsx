@@ -23,12 +23,22 @@ import {
   GalleryClean,
   GalleryClipReveal,
 } from "@/components/sections/gallery/GalleryRefined";
+import {
+  GalleryPolaroid,
+  GalleryFeatured,
+  GalleryCarousel,
+  GalleryEditorial,
+} from "@/components/sections/gallery/GalleryV2";
 
 const VARIANTS = [
-  { id: "A", name: "★ Instagram-Feed", G: GalleryInstagram },
-  { id: "B", name: "★ Masonry + Slide-Caption", G: GalleryMasonryRefined },
-  { id: "C", name: "★ Clean Zoom/Fade", G: GalleryClean },
-  { id: "D", name: "★ Clip-Reveal", G: GalleryClipReveal },
+  { id: "E", name: "★ Polaroid-Pinboard", G: GalleryPolaroid },
+  { id: "F", name: "★ Featured + Thumbs", G: GalleryFeatured },
+  { id: "G", name: "★ Swipe-Carousel", G: GalleryCarousel },
+  { id: "H", name: "★ Editorial-Mosaik", G: GalleryEditorial },
+  { id: "A", name: "Instagram-Feed", G: GalleryInstagram },
+  { id: "B", name: "Masonry + Slide-Caption", G: GalleryMasonryRefined },
+  { id: "C", name: "Clean Zoom/Fade", G: GalleryClean },
+  { id: "D", name: "Clip-Reveal", G: GalleryClipReveal },
   { id: "6", name: "Scroll-Filmstrip", G: GalleryScrollX },
   { id: "7", name: "★ 3D-Coverflow", G: GalleryCoverflow },
   { id: "8", name: "★ Cursor-Spotlight", G: GallerySpotlight },
@@ -42,7 +52,7 @@ const VARIANTS = [
 ];
 
 export default function GalleryShowcase() {
-  const [active, setActive] = useState("A");
+  const [active, setActive] = useState("E");
   const current = VARIANTS.find((v) => v.id === active)!;
   const ActiveG = current.G;
 
