@@ -9,6 +9,11 @@ import {
   AboutStatement,
   AboutCollage,
   AboutZigzag,
+  AboutMarquee,
+  AboutIllustrated,
+  AboutStats,
+  AboutTimeline,
+  AboutBlobs,
 } from "@/components/sections/about/AboutVariants";
 
 const VARIANTS = [
@@ -17,6 +22,11 @@ const VARIANTS = [
   { id: "3", name: "Statement (dunkel)", About: AboutStatement },
   { id: "4", name: "Foto-Collage + Stat", About: AboutCollage },
   { id: "5", name: "Zickzack-Reihen", About: AboutZigzag },
+  { id: "6", name: "Wort-Laufband", About: AboutMarquee },
+  { id: "7", name: "Illustrationen (draw-in)", About: AboutIllustrated },
+  { id: "8", name: "Animierte Zahlen", About: AboutStats },
+  { id: "9", name: "Timeline", About: AboutTimeline },
+  { id: "10", name: "Schwebende Blobs", About: AboutBlobs },
 ];
 
 export default function AboutShowcase() {
