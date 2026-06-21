@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Star, Clock, MapPin, ArrowRight } from "lucide-react";
+import { Star, MapPin, ArrowRight } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { PLACEHOLDER_IMAGES as IMG } from "@/lib/media";
+import OpeningStatus from "@/components/OpeningStatus";
 
 /**
  * FINALE HERO (Sektion 2) – freigegeben: Option I "Diagonaler Split"
@@ -38,8 +39,6 @@ function Ctas({ className = "" }: { className?: string }) {
 }
 
 export default function Hero() {
-  const today = SITE.hours[(new Date().getDay() + 6) % 7]; // Mo=0 … So=6
-
   return (
     <section
       id="start"
@@ -101,10 +100,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-walnut/75">
-              <span className="inline-flex items-center gap-2">
-                <Clock size={15} className="text-terracotta" />
-                Heute: {today.open ? today.time : "Geschlossen"}
-              </span>
+              <OpeningStatus />
               <span className="inline-flex items-center gap-2">
                 <MapPin size={15} className="text-terracotta" />
                 {SITE.contact.street}, {SITE.contact.city}
