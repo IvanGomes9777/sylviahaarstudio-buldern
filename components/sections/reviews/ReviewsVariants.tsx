@@ -174,7 +174,7 @@ export function ReviewsDark() {
       <div className="relative z-10 mx-auto max-w-6xl">
         <Head light />
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {REVIEWS.map((r, i) => (
+          {REVIEWS.slice(0, 3).map((r, i) => (
             <motion.figure key={i} {...reveal} transition={{ duration: 0.6, delay: (i % 3) * 0.08, ease: EASE }}
               className="rounded-[1.5rem] border border-cream/10 bg-cream/5 p-6 backdrop-blur">
               <div className="flex items-center justify-between"><Stars n={r.stars} /><GoogleG /></div>

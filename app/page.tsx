@@ -4,6 +4,7 @@ import { AboutCinematic } from "@/components/sections/about/AboutPremium";
 import { ServicesTabs } from "@/components/sections/services/ServicesVariants";
 import { GalleryFlip } from "@/components/sections/gallery/GalleryFlip";
 import { TeamCards } from "@/components/sections/team/TeamVariants";
+import { ReviewsDark } from "@/components/sections/reviews/ReviewsVariants";
 import { ContactTabs } from "@/components/sections/contact/ContactPremium";
 import Footer from "@/components/sections/Footer";
 import { siteGraph } from "@/lib/schema";
@@ -33,7 +34,10 @@ export default function Home() {
       {/* 6 – Team (Karten + Hover-Zoom) */}
       <TeamCards />
 
-      {/* 7 – Kontakt (Tabs: Nachricht/Anfahrt/Öffnungszeiten) */}
+      {/* 7 – Bewertungen (Dunkel + Grid, 3 Google-Rezensionen) */}
+      <ReviewsDark />
+
+      {/* 8 – Kontakt (Tabs: Nachricht/Anfahrt/Öffnungszeiten) */}
       <ContactTabs />
 
       <Footer />
