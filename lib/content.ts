@@ -2,8 +2,10 @@
 // Quelle: bestehende Website + Google + StudioBookr. Preise/Dauer wie veröffentlicht.
 
 export const ABOUT = {
+  eyebrow: "Über uns",
+  headline: "Schön, dass du da bist",
   intro:
-    "Bei Sylvias Haarstudio dreht sich alles um Sie: individuelle Frisurenberatung und maßgeschneiderte Haarschnitte für jeden Anlass. Ihre Zufriedenheit steht bei uns an erster Stelle.",
+    "Bei Sylvias Haarstudio dreht sich alles um dich: individuelle Frisurenberatung und maßgeschneiderte Haarschnitte für jeden Anlass. Deine Zufriedenheit steht bei uns an erster Stelle.",
   points: [
     "Persönliche Typ- und Frisurenberatung – wir hören zu, bevor wir zur Schere greifen.",
     "Professionelle Farbbehandlungen und Pflege mit hochwertigen Produkten.",
@@ -11,6 +13,30 @@ export const ABOUT = {
     "Hell, geräumig, kinderfreundlich – ein Salon, in dem man sich wohlfühlt.",
   ],
 };
+
+// Strukturierte USP-Bausteine (für Karten-/Zickzack-Layouts).
+export const ABOUT_FEATURES = [
+  {
+    icon: "consult",
+    title: "Persönliche Beratung",
+    desc: "Wir hören zu, bevor wir zur Schere greifen – Typ- und Frisurenberatung, die wirklich zu dir passt.",
+  },
+  {
+    icon: "color",
+    title: "Farbe & Pflege",
+    desc: "Professionelle Farbbehandlungen und Pflege ausschließlich mit hochwertigen Produkten.",
+  },
+  {
+    icon: "occasion",
+    title: "Für jeden Anlass",
+    desc: "Vom schnellen Alltagsschnitt bis zum Styling für Hochzeit und besondere Tage.",
+  },
+  {
+    icon: "cozy",
+    title: "Zum Wohlfühlen",
+    desc: "Hell, geräumig und kinderfreundlich – ein Salon, in dem man gerne etwas verweilt.",
+  },
+] as const;
 
 export type Service = {
   name: string;
