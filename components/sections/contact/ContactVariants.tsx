@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, Instagram, CalendarCheck } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, CalendarCheck, Mail } from "lucide-react";
 import { SITE } from "@/lib/site";
 import ContactForm from "@/components/ContactForm";
 import MapEmbed from "@/components/MapEmbed";
@@ -45,6 +45,9 @@ function InfoCard() {
       </a>
       <a href={`tel:${SITE.contact.phoneHref}`} className="flex items-center gap-3 text-walnut transition-colors hover:text-terracotta">
         <Phone size={20} className="shrink-0 text-terracotta" /> {SITE.contact.phone}
+      </a>
+      <a href={`mailto:${SITE.contact.email}`} className="flex items-center gap-3 text-walnut transition-colors hover:text-terracotta">
+        <Mail size={20} className="shrink-0 text-terracotta" /> {SITE.contact.email}
       </a>
       <div className="flex items-start gap-3">
         <Clock size={20} className="mt-0.5 shrink-0 text-terracotta" />

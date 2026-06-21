@@ -28,13 +28,13 @@ export default function Impressum() {
         </p>
 
         <h2>Vertreten durch</h2>
-        <p>[Geschäftsführer:in – bitte ergänzen]</p>
+        <p>{SITE.owner} (Inhaberin)</p>
 
         <h2>Kontakt</h2>
         <p>
           Telefon: <a href={`tel:${SITE.contact.phoneHref}`}>{SITE.contact.phone}</a>
           <br />
-          E-Mail: [bitte E-Mail-Adresse ergänzen – nach § 5 DDG Pflicht]
+          E-Mail: <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>
         </p>
 
         <h2>Umsatzsteuer-ID</h2>
@@ -77,9 +77,10 @@ export default function Impressum() {
         </p>
 
         <p className="!mt-10 text-sm text-walnut/45">
-          Hinweis: Dieses Impressum basiert auf den Angaben des bestehenden Auftritts und
-          ist vor dem Live-Gang zu vervollständigen (Geschäftsführer:in, E-Mail, ggf.
-          USt-IdNr.). Die persönliche Steuernummer gehört nicht ins Impressum.
+          Hinweis: Eine Umsatzsteuer-Identifikationsnummer (Format DE + 9 Ziffern) ist nur
+          anzugeben, falls vorhanden. Die persönliche Steuernummer (z. B. 312/5142/0912)
+          gehört nicht ins Impressum und wird daher hier nicht veröffentlicht. Finale
+          Rechtstexte vor Live-Gang über einen Generator/Anwalt prüfen.
         </p>
       </div>
       <Footer />

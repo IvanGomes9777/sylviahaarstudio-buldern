@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Phone, MapPin } from "lucide-react";
+import { Instagram, Phone, MapPin, Mail } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 export default function Footer() {
@@ -22,6 +22,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             <li className="flex items-start gap-2"><MapPin size={16} className="mt-0.5 shrink-0" />{SITE.contact.street}, {SITE.contact.zip} {SITE.contact.city}-{SITE.contact.district}</li>
             <li><a href={`tel:${SITE.contact.phoneHref}`} className="flex items-center gap-2 hover:text-cream"><Phone size={16} /> {SITE.contact.phone}</a></li>
+            <li><a href={`mailto:${SITE.contact.email}`} className="flex items-center gap-2 hover:text-cream"><Mail size={16} /> {SITE.contact.email}</a></li>
           </ul>
           <h3 className="mt-6 text-sm font-semibold uppercase tracking-wider text-apricot">Öffnungszeiten</h3>
           <p className="mt-3 text-sm leading-relaxed text-cream/70">Mo–Do 9–18 · Fr 9–19<br />Sa 8–13 · So geschlossen</p>

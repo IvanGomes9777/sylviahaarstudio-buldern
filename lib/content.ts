@@ -128,4 +128,14 @@ export const REVIEWS = [
     author: "Marvin N.",
     stars: 5,
   },
+  {
+    text: "Sehr freundliches Personal und gute Friseure. Ich war sehr zufrieden mit meiner neuen Frisur.",
+    author: "Silvia E.",
+    stars: 5,
+  },
+  {
+    text: "Bester Service und immer nett.",
+    author: "Frank S.",
+    stars: 5,
+  },
 ];

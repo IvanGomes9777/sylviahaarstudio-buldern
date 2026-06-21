@@ -17,6 +17,7 @@ export const siteGraph = {
       contactPoint: {
         "@type": "ContactPoint",
         telephone: SITE.contact.phoneHref,
+        email: SITE.contact.email,
         contactType: "customer service",
         areaServed: "DE",
         availableLanguage: ["de"],
@@ -37,6 +38,7 @@ export const siteGraph = {
       image: `${BASE}/sylvialogo.png`,
       url: `${BASE}/`,
       telephone: SITE.contact.phoneHref,
+      email: SITE.contact.email,
       priceRange: "€€",
       address: {
         "@type": "PostalAddress",

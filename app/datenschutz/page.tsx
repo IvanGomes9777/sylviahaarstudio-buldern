@@ -25,11 +25,11 @@ export default function Datenschutz() {
 
         <h2>1. Verantwortlicher</h2>
         <p>
-          {SITE.legalName}
+          {SITE.legalName}, vertreten durch {SITE.owner}
           <br />
           {SITE.contact.street}, {SITE.contact.zip} {SITE.contact.city}
           <br />
-          Telefon: {SITE.contact.phone} · E-Mail: [bitte ergänzen]
+          Telefon: {SITE.contact.phone} · E-Mail: {SITE.contact.email}
         </p>
 
         <h2>2. Hosting</h2>
