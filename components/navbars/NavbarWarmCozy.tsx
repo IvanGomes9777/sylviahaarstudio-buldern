@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 /**
@@ -37,23 +38,21 @@ export default function NavbarWarmCozy() {
       >
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-[clamp(1rem,4vw,2.5rem)] py-[clamp(0.85rem,1.6vw,1.25rem)]">
           {/* Logo */}
-          <a href="#start" className="group flex items-center gap-2">
-            <motion.span
-              whileHover={{ rotate: [0, -12, 10, 0] }}
-              transition={{ duration: 0.6 }}
-              className="grid h-9 w-9 place-items-center rounded-full bg-terracotta/15 text-terracotta"
-            >
-              <Heart size={17} fill="currentColor" />
-            </motion.span>
-            <span className="leading-tight">
-              <span className="block font-script text-[clamp(1.6rem,3vw,2.1rem)] text-walnut">
-                {SITE.name}
-              </span>
-              <span className="-mt-1 block text-[0.55rem] tracking-[0.32em] text-walnut/60">
-                {SITE.brandLine}
-              </span>
-            </span>
-          </a>
+          <motion.a
+            href="#start"
+            whileHover={{ rotate: [0, -2.5, 2, 0] }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center"
+          >
+            <Image
+              src="/sylvialogo.png"
+              alt="Sylvias Haarstudio"
+              width={512}
+              height={280}
+              priority
+              className="h-[clamp(2.2rem,4.2vw,2.9rem)] w-auto"
+            />
+          </motion.a>
 
           {/* Desktop nav */}
           <ul className="hidden items-center gap-8 md:flex">
@@ -99,7 +98,13 @@ export default function NavbarWarmCozy() {
             className="fixed inset-0 z-50 bg-cream md:hidden"
           >
             <div className="flex items-center justify-between px-6 py-5">
-              <span className="font-script text-3xl text-walnut">{SITE.name}</span>
+              <Image
+                src="/sylvialogo.png"
+                alt="Sylvias Haarstudio"
+                width={512}
+                height={280}
+                className="h-9 w-auto"
+              />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Menü schließen"

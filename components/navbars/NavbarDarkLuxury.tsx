@@ -1,9 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, Scissors } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { SITE } from "@/lib/site";
+
+// Logo auf dunklem Hintergrund als edles Weiß-Monochrom.
+const whiteLogo = { filter: "brightness(0) invert(1)" } as const;
 
 /**
  * OPTION 1 – DARK-LUXURY-CINEMATIC
@@ -36,17 +40,18 @@ export default function NavbarDarkLuxury() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-[clamp(1rem,4vw,2.5rem)] py-[clamp(0.85rem,1.6vw,1.25rem)]">
           {/* Logo */}
-          <a href="#start" className="group flex items-center gap-2.5 text-white">
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-gold/40 text-gold transition-transform duration-500 group-hover:rotate-[120deg]">
-              <Scissors size={17} />
-            </span>
-            <span className="leading-none">
-              <span className="block font-serif text-[clamp(1.15rem,2.2vw,1.5rem)] tracking-[0.12em] text-white">
-                {SITE.name.toUpperCase()}
-              </span>
-              <span className="block text-[0.6rem] tracking-[0.42em] text-gold/80">
-                {SITE.brandLine}
-              </span>
+          <a href="#start" className="group flex items-center gap-3">
+            <Image
+              src="/sylvialogo.png"
+              alt="Sylvias Haarstudio"
+              width={512}
+              height={280}
+              priority
+              style={whiteLogo}
+              className="h-[clamp(2.1rem,4vw,2.75rem)] w-auto transition-transform duration-500 group-hover:scale-[1.04]"
+            />
+            <span className="hidden text-[0.6rem] tracking-[0.42em] text-gold/80 sm:block">
+              {SITE.brandLine}
             </span>
           </a>
 
@@ -97,9 +102,14 @@ export default function NavbarDarkLuxury() {
             className="fixed inset-0 z-50 bg-ink/95 backdrop-blur-xl lg:hidden"
           >
             <div className="flex items-center justify-between px-6 py-5">
-              <span className="font-serif text-xl tracking-[0.12em] text-white">
-                {SITE.name.toUpperCase()}
-              </span>
+              <Image
+                src="/sylvialogo.png"
+                alt="Sylvias Haarstudio"
+                width={512}
+                height={280}
+                style={whiteLogo}
+                className="h-9 w-auto"
+              />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Menü schließen"

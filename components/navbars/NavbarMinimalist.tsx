@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { SITE } from "@/lib/site";
@@ -32,13 +33,15 @@ export default function NavbarMinimalist() {
       >
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-[clamp(1rem,4vw,2.5rem)] py-[clamp(1rem,1.8vw,1.5rem)]">
           {/* Logo */}
-          <a href="#start" className="leading-tight text-espresso">
-            <span className="block font-cormorant text-[clamp(1.3rem,2.4vw,1.75rem)] font-medium tracking-[0.18em]">
-              {SITE.name.toUpperCase()}
-            </span>
-            <span className="mt-0.5 block text-[0.55rem] tracking-[0.5em] text-espresso/55">
-              {SITE.brandLine}
-            </span>
+          <a href="#start" className="group flex items-center">
+            <Image
+              src="/sylvialogo.png"
+              alt="Sylvias Haarstudio"
+              width={512}
+              height={280}
+              priority
+              className="h-[clamp(2.1rem,4vw,2.75rem)] w-auto transition-opacity duration-300 group-hover:opacity-80"
+            />
           </a>
 
           {/* Desktop nav */}
@@ -84,9 +87,13 @@ export default function NavbarMinimalist() {
             className="fixed inset-0 z-50 bg-beige md:hidden"
           >
             <div className="flex items-center justify-between px-6 py-6">
-              <span className="font-cormorant text-2xl tracking-[0.18em] text-espresso">
-                {SITE.name.toUpperCase()}
-              </span>
+              <Image
+                src="/sylvialogo.png"
+                alt="Sylvias Haarstudio"
+                width={512}
+                height={280}
+                className="h-9 w-auto"
+              />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Menü schließen"

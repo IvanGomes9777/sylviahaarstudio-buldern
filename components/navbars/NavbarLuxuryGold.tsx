@@ -1,9 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { SITE } from "@/lib/site";
+
+// Logo auf dunklem Hintergrund als edles Weiß-Monochrom.
+const whiteLogo = { filter: "brightness(0) invert(1)" } as const;
 
 /**
  * OPTION 4 – LUXURY-GOLD-GLAMOROUS
@@ -62,12 +66,18 @@ export default function NavbarLuxuryGold() {
             <Menu size={22} strokeWidth={1.3} />
           </button>
 
-          {/* Center monogram */}
+          {/* Center logo */}
           <a href="#start" className="flex flex-col items-center px-2 text-center">
-            <span className="font-cormorant text-[clamp(1.4rem,3vw,2rem)] font-semibold tracking-[0.3em] text-champagne">
-              {SITE.name.toUpperCase()}
-            </span>
-            <span className="mt-1 flex items-center gap-2 text-[0.5rem] tracking-[0.4em] text-champagne/60">
+            <Image
+              src="/sylvialogo.png"
+              alt="Sylvias Haarstudio"
+              width={512}
+              height={280}
+              priority
+              style={whiteLogo}
+              className="h-[clamp(2.2rem,4.5vw,3rem)] w-auto"
+            />
+            <span className="mt-1.5 flex items-center gap-2 text-[0.5rem] tracking-[0.4em] text-champagne/60">
               <span className="h-px w-5 bg-champagne/40" />
               {SITE.brandLine}
               <span className="h-px w-5 bg-champagne/40" />
@@ -119,9 +129,14 @@ export default function NavbarLuxuryGold() {
             className="fixed inset-0 z-50 bg-ink/97 backdrop-blur-xl lg:hidden"
           >
             <div className="flex items-center justify-between px-6 py-6">
-              <span className="font-cormorant text-2xl tracking-[0.3em] text-champagne">
-                {SITE.name.toUpperCase()}
-              </span>
+              <Image
+                src="/sylvialogo.png"
+                alt="Sylvias Haarstudio"
+                width={512}
+                height={280}
+                style={whiteLogo}
+                className="h-9 w-auto"
+              />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Menü schließen"

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 /**
@@ -23,19 +24,16 @@ export default function NavbarPlayful() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-[1.75rem] border border-black/5 bg-white/90 px-[clamp(1rem,3vw,1.75rem)] py-3 shadow-[0_18px_50px_-20px_rgba(233,30,99,0.5)] backdrop-blur-xl">
         {/* Logo */}
-        <a href="#start" className="flex items-center gap-2">
-          <motion.span
-            whileHover={{ rotate: 18, scale: 1.1 }}
-            className="grid h-9 w-9 place-items-center rounded-2xl bg-gradient-to-br from-magenta to-teal text-white"
-          >
-            <Sparkles size={18} />
-          </motion.span>
-          <span className="font-poppins text-[clamp(1.05rem,2.2vw,1.35rem)] font-extrabold">
-            <span className="bg-gradient-to-r from-magenta via-grape to-teal bg-clip-text text-transparent">
-              {SITE.name}
-            </span>
-          </span>
-        </a>
+        <motion.a href="#start" whileHover={{ rotate: -2, scale: 1.04 }} className="flex items-center">
+          <Image
+            src="/sylvialogo.png"
+            alt="Sylvias Haarstudio"
+            width={512}
+            height={280}
+            priority
+            className="h-[clamp(2rem,3.6vw,2.5rem)] w-auto"
+          />
+        </motion.a>
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-1 md:flex">
@@ -84,11 +82,13 @@ export default function NavbarPlayful() {
             className="absolute inset-x-[clamp(0.75rem,3vw,1.5rem)] top-2 z-50 rounded-[1.75rem] bg-white p-5 shadow-2xl md:hidden"
           >
             <div className="flex items-center justify-between">
-              <span className="font-poppins text-lg font-extrabold">
-                <span className="bg-gradient-to-r from-magenta to-teal bg-clip-text text-transparent">
-                  {SITE.name}
-                </span>
-              </span>
+              <Image
+                src="/sylvialogo.png"
+                alt="Sylvias Haarstudio"
+                width={512}
+                height={280}
+                className="h-8 w-auto"
+              />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Menü schließen"
