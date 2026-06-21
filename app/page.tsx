@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import { AboutCinematic } from "@/components/sections/about/AboutPremium";
 import { ServicesTabs } from "@/components/sections/services/ServicesVariants";
 import { GalleryFlip } from "@/components/sections/gallery/GalleryFlip";
+import { TeamCards } from "@/components/sections/team/TeamVariants";
 import { SITE } from "@/lib/site";
 
 // Produktions-Startseite.
@@ -52,7 +53,9 @@ export default function Home() {
 
       {/* SEKTION 5 – Galerie (final: GSAP-Flip-Filter + Instagram) */}
       <GalleryFlip />
-      <Placeholder id="team" title="Team" note="Folgt – Lina, Michaela, Simone, Sandra & Larissa." />
+
+      {/* SEKTION 6 – Team (final: Karten + Hover-Zoom) */}
+      <TeamCards />
       <Placeholder id="kontakt" title="Kontakt" note="Folgt – Adresse, Öffnungszeiten, Karte & Kontaktformular." />
 
       {/* Footer-Platzhalter mit Pflicht-Links (Compliance) */}
