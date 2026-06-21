@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NavbarWarmCozy from "@/components/navbars/NavbarWarmCozy";
 import Hero from "@/components/sections/Hero";
+import { AboutCinematic } from "@/components/sections/about/AboutPremium";
 import { SITE } from "@/lib/site";
 
 // Produktions-Startseite.
@@ -41,7 +42,8 @@ export default function Home() {
       {/* SEKTION 2 – Hero (final: Diagonaler Split + Info-Karte) */}
       <Hero />
 
-      <Placeholder id="ueber-uns" title="Über uns" note="Folgt als eigene Sektion." />
+      {/* SEKTION 3 – Über uns (final: Cinematic Reveal) */}
+      <AboutCinematic />
       <Placeholder id="leistungen" title="Leistungen" note="Folgt als eigene Sektion – mit echten Preisen." />
       <Placeholder
         id="galerie"
