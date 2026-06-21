@@ -36,6 +36,7 @@ export default function Footer() {
             ))}
           </ul>
           <ul className="mt-6 space-y-2 text-sm">
+            <li><Link href="/faq" className="hover:text-cream">FAQ</Link></li>
             <li><Link href="/impressum" className="hover:text-cream">Impressum</Link></li>
             <li><Link href="/datenschutz" className="hover:text-cream">Datenschutz</Link></li>
           </ul>
