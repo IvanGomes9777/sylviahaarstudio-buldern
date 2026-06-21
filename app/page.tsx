@@ -6,11 +6,16 @@ import { GalleryFlip } from "@/components/sections/gallery/GalleryFlip";
 import { TeamCards } from "@/components/sections/team/TeamVariants";
 import { ContactTabs } from "@/components/sections/contact/ContactPremium";
 import Footer from "@/components/sections/Footer";
+import { siteGraph } from "@/lib/schema";
 
 // Produktions-Startseite – alle 7 Sektionen final.
 export default function Home() {
   return (
     <main className="min-h-[100svh] bg-cream font-sans text-walnut">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
+      />
       <NavbarWarmCozy />
 
       {/* 2 – Hero (Diagonaler Split + Info-Karte) */}

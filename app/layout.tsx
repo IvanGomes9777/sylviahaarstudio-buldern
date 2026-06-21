@@ -46,12 +46,22 @@ export const metadata: Metadata = {
   description:
     "Sylvias Haarstudio in Dülmen-Buldern: Ihr Friseursalon für jeden Anlass. Persönliche Beratung, Schnitt, Farbe & Anlass-Styling. 4,5★ bei Google. Jetzt Termin buchen.",
   metadataBase: new URL("https://www.sylvias-haarstudio.de"),
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "de_DE",
+    url: "/",
+    siteName: "Sylvias Haarstudio",
     title: "Sylvias Haarstudio – Friseur in Dülmen-Buldern",
     description:
       "Ihr Friseursalon für jeden Anlass – Schnitt, Farbe & Pflege mit persönlicher Beratung.",
+    images: [{ url: "/sylvialogo.png", width: 512, height: 280, alt: "Sylvias Haarstudio" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Sylvias Haarstudio – Friseur in Dülmen-Buldern",
+    description: "Ihr Friseursalon für jeden Anlass.",
+    images: ["/sylvialogo.png"],
   },
   robots: { index: true, follow: true },
 };
