@@ -44,6 +44,7 @@ export const SITE = {
     { label: "Leistungen", href: "#leistungen" },
     { label: "Galerie", href: "#galerie" },
     { label: "Team", href: "#team" },
+    { label: "Bewertungen", href: "#bewertungen" },
     { label: "Kontakt", href: "#kontakt" },
   ],
 } as const;

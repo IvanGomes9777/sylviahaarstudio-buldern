@@ -55,7 +55,7 @@ export default function NavbarWarmCozy() {
           </motion.a>
 
           {/* Desktop nav */}
-          <ul className="hidden items-center gap-7 lg:flex">
+          <ul className="hidden items-center gap-5 lg:flex xl:gap-7">
             {SITE.nav.map((item) => (
               <li key={item.href}>
                 <a
