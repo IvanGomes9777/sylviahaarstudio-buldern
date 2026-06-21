@@ -17,9 +17,19 @@ import {
   GalleryFilter,
   GalleryParallaxColumns,
 } from "@/components/sections/gallery/GalleryPremium";
+import {
+  GalleryInstagram,
+  GalleryMasonryRefined,
+  GalleryClean,
+  GalleryClipReveal,
+} from "@/components/sections/gallery/GalleryRefined";
 
 const VARIANTS = [
-  { id: "6", name: "★ Scroll-Filmstrip", G: GalleryScrollX },
+  { id: "A", name: "★ Instagram-Feed", G: GalleryInstagram },
+  { id: "B", name: "★ Masonry + Slide-Caption", G: GalleryMasonryRefined },
+  { id: "C", name: "★ Clean Zoom/Fade", G: GalleryClean },
+  { id: "D", name: "★ Clip-Reveal", G: GalleryClipReveal },
+  { id: "6", name: "Scroll-Filmstrip", G: GalleryScrollX },
   { id: "7", name: "★ 3D-Coverflow", G: GalleryCoverflow },
   { id: "8", name: "★ Cursor-Spotlight", G: GallerySpotlight },
   { id: "9", name: "★ Filter + Layout-Anim", G: GalleryFilter },
@@ -32,7 +42,7 @@ const VARIANTS = [
 ];
 
 export default function GalleryShowcase() {
-  const [active, setActive] = useState("6");
+  const [active, setActive] = useState("A");
   const current = VARIANTS.find((v) => v.id === active)!;
   const ActiveG = current.G;
 
