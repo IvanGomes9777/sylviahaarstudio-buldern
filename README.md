@@ -8,9 +8,15 @@ Responsive-Guide, SEO/GEO, Web-Security/DSGVO).
 
 | Sektion | Status |
 |---|---|
-| **1. Navbar / Header** | 🟡 5 Optionen zur Auswahl (Showcase) |
-| 2. Hero | ⏳ wartet auf Navbar-Freigabe |
-| 3. Über uns / Leistungen / Galerie / Kontakt / Footer | ⏳ |
+| **1. Navbar / Header** | ✅ Freigegeben: **Option 5 „Warm-Welcoming Cozy"** (mit Logo + StudioBookr-CTA) |
+| 2. Hero | 🟡 als nächstes – 5 Optionen folgen |
+| 3. Über uns / Leistungen / Galerie / Team / Kontakt / Footer | ⏳ |
+
+Navigation: Start · Über uns · Leistungen · **Galerie** · Team · Kontakt.
+Showcase der 5 Navbar-Optionen weiterhin unter **`/showcase`**.
+
+> ⚠️ Footer verlinkt `/impressum` + `/datenschutz` – diese Rechtstexte kommen aus
+> einem seriösen Generator (eRecht24 o. ä.) mit den UG-Daten, **vor** dem Live-Gang.
 
 ## Lokal starten
 

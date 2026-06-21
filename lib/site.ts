@@ -40,6 +40,7 @@ export const SITE = {
     { label: "Start", href: "#start" },
     { label: "Über uns", href: "#ueber-uns" },
     { label: "Leistungen", href: "#leistungen" },
+    { label: "Galerie", href: "#galerie" },
     { label: "Team", href: "#team" },
     { label: "Kontakt", href: "#kontakt" },
   ],

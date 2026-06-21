@@ -55,7 +55,7 @@ export default function NavbarWarmCozy() {
           </motion.a>
 
           {/* Desktop nav */}
-          <ul className="hidden items-center gap-8 md:flex">
+          <ul className="hidden items-center gap-7 lg:flex">
             {SITE.nav.map((item) => (
               <li key={item.href}>
                 <a
@@ -68,9 +68,11 @@ export default function NavbarWarmCozy() {
             ))}
           </ul>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <motion.a
-              href="#kontakt"
+              href={SITE.contact.booking}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               className="inline-block rounded-full bg-walnut px-6 py-3 font-sans text-sm font-semibold text-cream shadow-md shadow-walnut/20 transition-colors hover:bg-terracotta"
@@ -82,7 +84,7 @@ export default function NavbarWarmCozy() {
           <button
             onClick={() => setOpen(true)}
             aria-label="Menü öffnen"
-            className="grid h-11 w-11 place-items-center rounded-full bg-terracotta/10 text-walnut md:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full bg-terracotta/10 text-walnut lg:hidden"
           >
             <Menu size={22} />
           </button>
@@ -95,7 +97,7 @@ export default function NavbarWarmCozy() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-cream md:hidden"
+            className="fixed inset-0 z-50 overflow-y-auto bg-cream lg:hidden"
           >
             <div className="flex items-center justify-between px-6 py-5">
               <Image
@@ -133,7 +135,9 @@ export default function NavbarWarmCozy() {
             </ul>
             <div className="px-7 pt-8">
               <a
-                href="#kontakt"
+                href={SITE.contact.booking}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="block rounded-full bg-walnut py-4 text-center font-sans font-semibold text-cream"
               >
