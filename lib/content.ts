@@ -83,12 +83,17 @@ export const SERVICES: { category: string; items: Service[] }[] = [
 ];
 
 // Team laut StudioBookr (Nachnamen abgekürzt – Datensparsamkeit).
+// Team laut StudioBookr. Porträts = geprüfte Unsplash-Platzhalter (später echte
+// Team-Fotos). role/specialty sind Platzhalter – bitte vom Salon bestätigen.
+const portrait = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&h=750&q=80`;
+
 export const TEAM = [
-  { name: "Lina S." },
-  { name: "Michaela A." },
-  { name: "Simone E." },
-  { name: "Sandra M." },
-  { name: "Larissa K." },
+  { name: "Lina S.", role: "Friseurin", specialty: "Schnitt & Farbe", img: portrait("1494790108377-be9c29b29330") },
+  { name: "Michaela A.", role: "Friseurin", specialty: "Styling & Beratung", img: portrait("1438761681033-6461ffad8d80") },
+  { name: "Simone E.", role: "Friseurin", specialty: "Farbe & Pflege", img: portrait("1580489944761-15a19d654956") },
+  { name: "Sandra M.", role: "Friseurin", specialty: "Schnitt & Styling", img: portrait("1517841905240-472988babdf9") },
+  { name: "Larissa K.", role: "Friseurin", specialty: "Farbe & Trends", img: portrait("1492462543947-040389c4a66c") },
 ];
 
 // Echte Google-Rezensionen (öffentlich, Nachname abgekürzt – DSGVO/Branchen-Hinweis).
