@@ -29,12 +29,14 @@ import {
   GalleryCarousel,
   GalleryEditorial,
 } from "@/components/sections/gallery/GalleryV2";
+import { GalleryFlip } from "@/components/sections/gallery/GalleryFlip";
 
 const VARIANTS = [
-  { id: "E", name: "★ Polaroid-Pinboard", G: GalleryPolaroid },
-  { id: "F", name: "★ Featured + Thumbs", G: GalleryFeatured },
-  { id: "G", name: "★ Swipe-Carousel", G: GalleryCarousel },
-  { id: "H", name: "★ Editorial-Mosaik", G: GalleryEditorial },
+  { id: "Flip", name: "★ GSAP-Flip-Filter", G: GalleryFlip },
+  { id: "E", name: "Polaroid-Pinboard", G: GalleryPolaroid },
+  { id: "F", name: "Featured + Thumbs", G: GalleryFeatured },
+  { id: "G", name: "Swipe-Carousel", G: GalleryCarousel },
+  { id: "H", name: "Editorial-Mosaik", G: GalleryEditorial },
   { id: "A", name: "Instagram-Feed", G: GalleryInstagram },
   { id: "B", name: "Masonry + Slide-Caption", G: GalleryMasonryRefined },
   { id: "C", name: "Clean Zoom/Fade", G: GalleryClean },
@@ -52,7 +54,7 @@ const VARIANTS = [
 ];
 
 export default function GalleryShowcase() {
-  const [active, setActive] = useState("E");
+  const [active, setActive] = useState("Flip");
   const current = VARIANTS.find((v) => v.id === active)!;
   const ActiveG = current.G;
 
