@@ -2,6 +2,7 @@ import Link from "next/link";
 import NavbarWarmCozy from "@/components/navbars/NavbarWarmCozy";
 import Hero from "@/components/sections/Hero";
 import { AboutCinematic } from "@/components/sections/about/AboutPremium";
+import { ServicesTabs } from "@/components/sections/services/ServicesVariants";
 import { SITE } from "@/lib/site";
 
 // Produktions-Startseite.
@@ -44,7 +45,9 @@ export default function Home() {
 
       {/* SEKTION 3 – Über uns (final: Cinematic Reveal) */}
       <AboutCinematic />
-      <Placeholder id="leistungen" title="Leistungen" note="Folgt als eigene Sektion – mit echten Preisen." />
+
+      {/* SEKTION 4 – Leistungen (final: Kategorie-Tabs) */}
+      <ServicesTabs />
       <Placeholder
         id="galerie"
         title="Galerie"
