@@ -9,15 +9,27 @@ import {
   ContactStacked,
   ContactMapHero,
 } from "@/components/sections/contact/ContactVariants";
+import {
+  ContactDark,
+  ContactBento,
+  ContactTabs,
+  ContactGlass,
+  ContactMinimal,
+} from "@/components/sections/contact/ContactPremium";
 
 const VARIANTS = [
+  { id: "4", name: "Dunkel & elegant", C: ContactDark },
+  { id: "5", name: "Bento-Grid", C: ContactBento },
+  { id: "6", name: "Tabs", C: ContactTabs },
+  { id: "7", name: "Glas über Karte", C: ContactGlass },
+  { id: "8", name: "Minimal (Anruf)", C: ContactMinimal },
   { id: "1", name: "Split: Info + Formular", C: ContactSplit },
   { id: "2", name: "Karten + Formular", C: ContactStacked },
   { id: "3", name: "Karte prominent", C: ContactMapHero },
 ];
 
 export default function ContactShowcase() {
-  const [active, setActive] = useState("1");
+  const [active, setActive] = useState("4");
   const current = VARIANTS.find((v) => v.id === active)!;
   const ActiveC = current.C;
 
