@@ -15,8 +15,20 @@ import {
   AboutTimeline,
   AboutBlobs,
 } from "@/components/sections/about/AboutVariants";
+import {
+  AboutEditorial,
+  AboutPinned,
+  AboutKinetic,
+  AboutTilt,
+  AboutCinematic,
+} from "@/components/sections/about/AboutPremium";
 
 const VARIANTS = [
+  { id: "11", name: "★ Editorial Spread", About: AboutEditorial },
+  { id: "12", name: "★ Pinned Storytelling", About: AboutPinned },
+  { id: "13", name: "★ Kinetic Words", About: AboutKinetic },
+  { id: "14", name: "★ 3D-Tilt Glass", About: AboutTilt },
+  { id: "15", name: "★ Cinematic Reveal", About: AboutCinematic },
   { id: "1", name: "Bild + Häkchen-Liste", About: AboutSplit },
   { id: "2", name: "USP-Karten", About: AboutCards },
   { id: "3", name: "Statement (dunkel)", About: AboutStatement },
@@ -30,7 +42,7 @@ const VARIANTS = [
 ];
 
 export default function AboutShowcase() {
-  const [active, setActive] = useState("1");
+  const [active, setActive] = useState("11");
   const current = VARIANTS.find((v) => v.id === active)!;
   const ActiveAbout = current.About;
 
