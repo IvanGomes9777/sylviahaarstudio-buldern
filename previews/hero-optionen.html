@@ -19,6 +19,7 @@
   .d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}
   .pol{transition:transform .4s cubic-bezier(.22,1,.36,1)} .pol:hover{transform:rotate(0) scale(1.03)!important}
   .zoom{transition:transform .7s} .zoom:hover{transform:scale(1.08)}
+  @keyframes spin{to{transform:rotate(360deg)}} .spin{animation:spin 14s linear infinite;transform-origin:center}
 </style>
 </head>
 <body class="bg-cream">
@@ -114,9 +115,56 @@ const HEROES = {
       <img src="${IMG.detail}" alt="" class="absolute inset-0 h-full w-full object-cover"/>
     </div>
   </div></section>`,
+ F:()=>`<section class="bg-cream"><div class="mx-auto grid min-h-[100svh] max-w-7xl items-center gap-10 px-6 pt-24 pb-12 lg:grid-cols-2 lg:gap-14 lg:pt-12">
+    <div class="fu"><span class="text-[0.7rem] font-semibold tracking-[0.3em] text-terracotta">HAARSTUDIO · DÜLMEN-BULDERN</span>
+      <h1 class="mt-4 font-script text-[clamp(2.75rem,1rem+8vw,5.5rem)] leading-[1] text-walnut">${SLOGAN}</h1>
+      <p class="mt-5 max-w-md text-walnut/70">Schnitt, Farbe & Pflege für die ganze Familie – persönlich und ohne Stress.</p>
+      <div class="mt-8">${ctas(false)}</div></div>
+    <div class="fu d1 grid grid-cols-2 grid-rows-2 gap-3" style="height:min(80vh,36rem)">
+      <div class="group relative row-span-2 overflow-hidden rounded-[1.75rem] shadow-xl"><img src="${IMG.wash}" class="zoom absolute inset-0 h-full w-full object-cover"/></div>
+      <div class="group relative overflow-hidden rounded-[1.75rem] shadow-xl"><img src="${IMG.cut}" class="zoom absolute inset-0 h-full w-full object-cover"/></div>
+      <div class="group relative overflow-hidden rounded-[1.75rem] shadow-xl"><img src="${IMG.detail}" class="zoom absolute inset-0 h-full w-full object-cover"/></div>
+    </div></div></section>`,
+ G:()=>`<section class="relative flex min-h-[100svh] items-center overflow-hidden">
+    <img src="${IMG.interior}" class="absolute inset-0 h-full w-full object-cover"/>
+    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(75,58,38,.82),rgba(75,58,38,.4),transparent)"></div>
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-6 pt-20">
+      <div class="fu max-w-xl text-cream"><span class="mb-4 inline-block rounded-full border border-cream/40 px-4 py-1.5 text-[0.7rem] tracking-[0.25em]">HAARSTUDIO · DÜLMEN-BULDERN</span>
+        <h1 class="font-script text-[clamp(2.75rem,1rem+9vw,6rem)] leading-[0.95]">${SLOGAN}</h1></div>
+      <div class="fu d2 mt-10 max-w-md rounded-[1.75rem] bg-cream/95 p-6 shadow-2xl">${rating}
+        <div class="mt-4 text-sm text-walnut/75">🕐 Heute: 09:00 – 18:00 · 📍 Dülmen-Buldern</div>
+        <div class="mt-5">${ctas(false)}</div></div>
+    </div></section>`,
+ H:()=>`<section class="flex min-h-[100svh] flex-col items-center justify-center bg-cream px-6 pt-28 pb-12 text-center">
+    <span class="fu text-[0.7rem] font-semibold tracking-[0.3em] text-terracotta">HAARSTUDIO · DÜLMEN-BULDERN</span>
+    <h1 class="fu d1 mt-3 max-w-3xl font-script text-[clamp(2.5rem,1rem+8vw,5.5rem)] leading-[1] text-walnut">${SLOGAN}</h1>
+    <div class="fu d2 group relative mt-8 overflow-hidden shadow-2xl" style="width:clamp(15rem,60vw,24rem);aspect-ratio:3/4;border-radius:100vw 100vw 1.5rem 1.5rem"><img src="${IMG.wash}" class="zoom absolute inset-0 h-full w-full object-cover"/></div>
+    <div class="fu d3 mt-9">${ctas(false)}</div></section>`,
+ I:()=>`<section class="relative flex min-h-[100svh] items-center overflow-hidden bg-cream">
+    <div class="absolute inset-y-0 right-0 hidden w-[52%] lg:block" style="clip-path:polygon(18% 0,100% 0,100% 100%,0% 100%)"><img src="${IMG.styling}" class="h-full w-full object-cover"/></div>
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-6 pt-24 lg:pt-12">
+      <div class="fu max-w-xl"><span class="text-[0.7rem] font-semibold tracking-[0.3em] text-terracotta">HAARSTUDIO · DÜLMEN-BULDERN</span>
+        <h1 class="mt-4 font-script text-[clamp(2.75rem,1rem+9vw,6rem)] leading-[1] text-walnut">${SLOGAN}</h1>
+        <p class="mt-5 max-w-md text-walnut/70">Ein freundlicher Salon mit Zeit für dich – in Dülmen-Buldern.</p>
+        <div class="mt-8">${ctas(false)}</div><div class="mt-7">${rating}</div></div>
+      <div class="fu d1 relative mt-10 w-full overflow-hidden rounded-[1.75rem] shadow-xl lg:hidden" style="aspect-ratio:16/10"><img src="${IMG.styling}" class="absolute inset-0 h-full w-full object-cover"/></div>
+    </div></section>`,
+ J:()=>`<section class="relative flex min-h-[100svh] items-center overflow-hidden bg-cream px-6 pt-24">
+    <div class="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
+      <div class="fu"><span class="text-[0.7rem] font-semibold tracking-[0.3em] text-terracotta">HAARSTUDIO · DÜLMEN-BULDERN</span>
+        <h1 class="mt-4 font-script text-[clamp(2.75rem,1rem+9vw,6rem)] leading-[1] text-walnut">${SLOGAN}
+          <svg viewBox="0 0 300 18" class="mt-1 h-4 w-[min(20rem,80%)] text-terracotta" fill="none" preserveAspectRatio="none"><path d="M2 12 C 80 4, 220 4, 298 11" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></h1>
+        <p class="mt-4 max-w-md text-walnut/70">Hereinspaziert! Gute Laune, warme Getränke und Frisuren, die sitzen.</p>
+        <div class="mt-8">${ctas(false)}</div></div>
+      <div class="fu d1 relative mx-auto" style="width:clamp(14rem,55vw,22rem);aspect-ratio:1">
+        <div class="relative h-full w-full overflow-hidden rounded-full shadow-2xl"><img src="${IMG.detail}" class="absolute inset-0 h-full w-full object-cover"/></div>
+        <a href="${BOOK}" target="_blank" rel="noopener noreferrer" class="absolute -bottom-3 -right-3 grid h-28 w-28 place-items-center rounded-full bg-terracotta text-cream shadow-lg">
+          <svg viewBox="0 0 100 100" class="absolute inset-0 h-full w-full spin"><defs><path id="cp" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs><text font-size="11" fill="currentColor" letter-spacing="2"><textPath href="#cp">JETZT · TERMIN BUCHEN · ONLINE · </textPath></text></svg>
+          <span class="relative text-xl">→</span></a>
+      </div></div></section>`,
 };
 
-const META=[["A","Vollbild-Foto"],["B","Split / Editorial"],["C","Polaroid-Collage"],["D","Luftig + Streifen"],["E","Organisch + Trust"]];
+const META=[["A","Vollbild-Foto"],["B","Split / Editorial"],["C","Polaroid-Collage"],["D","Luftig + Streifen"],["E","Organisch + Trust"],["F","Bento-Grid"],["G","Foto + Info-Karte"],["H","Torbogen"],["I","Diagonaler Split"],["J","Sticker"]];
 let active="A";
 const app=document.getElementById('app'), sw=document.getElementById('sw');
 function render(){ app.innerHTML = navbar + HEROES[active](); window.scrollTo({top:0,behavior:'smooth'}); }

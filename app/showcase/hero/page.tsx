@@ -9,6 +9,11 @@ import {
   HeroCollage,
   HeroAiryStrip,
   HeroOrganic,
+  HeroBento,
+  HeroFloatingCard,
+  HeroArch,
+  HeroDiagonal,
+  HeroSticker,
 } from "@/components/heroes/Heroes";
 
 const VARIANTS = [
@@ -17,6 +22,11 @@ const VARIANTS = [
   { id: "C", name: "Polaroid-Collage", tag: "Authentisch · verspielt", Hero: HeroCollage },
   { id: "D", name: "Luftig + Bildstreifen", tag: "Minimal · großzügig", Hero: HeroAiryStrip },
   { id: "E", name: "Organische Form + Trust", tag: "Bewertung · Öffnungszeiten", Hero: HeroOrganic },
+  { id: "F", name: "Bento-Grid", tag: "Foto-Raster · modern", Hero: HeroBento },
+  { id: "G", name: "Foto + Info-Karte", tag: "Überlappend · Trust", Hero: HeroFloatingCard },
+  { id: "H", name: "Torbogen / Arch", tag: "Elegant · zentriert", Hero: HeroArch },
+  { id: "I", name: "Diagonaler Split", tag: "Dynamisch · clip-path", Hero: HeroDiagonal },
+  { id: "J", name: "Sticker / handgezeichnet", tag: "Verspielt · rotierender Badge", Hero: HeroSticker },
 ];
 
 export default function HeroShowcase() {
