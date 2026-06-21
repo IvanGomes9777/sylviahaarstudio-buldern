@@ -3,6 +3,7 @@ import NavbarWarmCozy from "@/components/navbars/NavbarWarmCozy";
 import Hero from "@/components/sections/Hero";
 import { AboutCinematic } from "@/components/sections/about/AboutPremium";
 import { ServicesTabs } from "@/components/sections/services/ServicesVariants";
+import { GalleryFlip } from "@/components/sections/gallery/GalleryFlip";
 import { SITE } from "@/lib/site";
 
 // Produktions-Startseite.
@@ -48,11 +49,9 @@ export default function Home() {
 
       {/* SEKTION 4 – Leistungen (final: Kategorie-Tabs) */}
       <ServicesTabs />
-      <Placeholder
-        id="galerie"
-        title="Galerie"
-        note="Hier zeigen wir später die Arbeiten von Sylvias Haarstudio – Vorher/Nachher, Schnitte, Farben & Looks."
-      />
+
+      {/* SEKTION 5 – Galerie (final: GSAP-Flip-Filter + Instagram) */}
+      <GalleryFlip />
       <Placeholder id="team" title="Team" note="Folgt – Lina, Michaela, Simone, Sandra & Larissa." />
       <Placeholder id="kontakt" title="Kontakt" note="Folgt – Adresse, Öffnungszeiten, Karte & Kontaktformular." />
 

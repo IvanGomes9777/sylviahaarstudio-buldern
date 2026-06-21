@@ -83,7 +83,7 @@ export function GalleryFlip() {
           keys={[key]}
           showClass="block"
           hideClass="hidden"
-          className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4"
+          className="mt-10 grid grid-cols-3 gap-2.5 sm:grid-cols-4 sm:gap-3 lg:grid-cols-5"
         >
           {GALLERY.map((img, i) => (
             <FlipRevealItem key={i} flipKey={img.cat}>
