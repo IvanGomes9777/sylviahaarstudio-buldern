@@ -42,16 +42,16 @@ const dancing = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Sylvia Haarstudio Buldern – Friseur & Farbexpertise in Buldern",
+  title: "Sylvias Haarstudio – Friseur in Dülmen-Buldern | Schnitt, Farbe & Styling",
   description:
-    "Sylvia Haarstudio in Buldern: Präzisionsschnitte, Balayage & Farbberatung. Persönlich, modern, mit Herz. Jetzt Termin sichern.",
-  metadataBase: new URL("https://www.sylvia-haarstudio-buldern.de"),
+    "Sylvias Haarstudio in Dülmen-Buldern: Ihr Friseursalon für jeden Anlass. Persönliche Beratung, Schnitt, Farbe & Anlass-Styling. 4,5★ bei Google. Jetzt Termin buchen.",
+  metadataBase: new URL("https://www.sylvias-haarstudio.de"),
   openGraph: {
     type: "website",
     locale: "de_DE",
-    title: "Sylvia Haarstudio Buldern",
+    title: "Sylvias Haarstudio – Friseur in Dülmen-Buldern",
     description:
-      "Friseur in Buldern – Schnitt, Farbe & Pflege mit persönlicher Beratung.",
+      "Ihr Friseursalon für jeden Anlass – Schnitt, Farbe & Pflege mit persönlicher Beratung.",
   },
   robots: { index: true, follow: true },
 };
